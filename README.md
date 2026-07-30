@@ -116,20 +116,6 @@ Stop the server with `Ctrl+C`.
 ![Streamlit home page](images/streamlit/home.png)
 
 <details>
-<summary><strong>Species Explorer</strong></summary>
-
-![Streamlit Species Explorer](images/streamlit/species_explorer.png)
-
-</details>
-
-<details>
-<summary><strong>Conservation Overview</strong></summary>
-
-![Streamlit Conservation Overview](images/streamlit/conservation_overview.png)
-
-</details>
-
-<details>
 <summary><strong>Global Distribution</strong></summary>
 
 ![Streamlit Global Distribution](images/streamlit/global_distribution.png)
