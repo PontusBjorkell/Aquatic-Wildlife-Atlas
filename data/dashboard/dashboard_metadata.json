@@ -1,0 +1,7 @@
+{
+  "generated_at_utc": "2026-07-30T12:16:52.002051+00:00",
+  "export_count": 12,
+  "map_sample_rows": 25000,
+  "map_sampling_rule": "Record_ID modulo 8 equals 1; maximum 25,000 rows",
+  "caveat": "The dataset shows strong synthetic/template-generated patterns. Dashboard results describe supplied records only."
+}

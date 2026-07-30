@@ -1,0 +1,8 @@
+Habitat_Type,Taxon_Count,Observation_Count,Threatened_Taxon_Count,Threatened_Taxon_Percentage,Mean_Taxon_Observed_Depth_m,Mean_Taxon_Water_Temp_C
+Marine,79,156434,25,31.65,394.85,14.01
+Freshwater,14,27723,3,21.43,3.58,20.99
+Freshwater/Marine,4,7922,2,50.0,51.26,20.89
+Brackish,1,1980,0,0.0,0.5,23.94
+Brackish/Freshwater,1,1980,0,0.0,1.49,20.92
+Brackish/Marine,1,1981,0,0.0,2.53,24.03
+Marine/Hypersaline,1,1980,0,0.0,2.58,24.0

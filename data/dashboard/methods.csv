@@ -1,0 +1,16 @@
+Observation_Method,Observation_Count,Observed_Taxon_Count,Location_Count,First_Observation_Date,Last_Observation_Date
+Acoustic Tagging,13334,101,38,2000-01-01,2024-08-17
+ROV Survey,13334,101,39,2000-01-01,2024-08-21
+SCUBA Diving,13334,101,38,2000-01-01,2024-08-21
+Satellite Telemetry,13334,101,39,2000-01-01,2024-08-21
+Trawl Net,13334,101,39,2000-01-02,2024-08-21
+Aerial Survey,13333,101,39,2000-01-01,2024-08-21
+Baited Camera,13333,101,39,2000-01-01,2024-08-20
+Beach Stranding,13333,101,40,2000-01-01,2024-08-21
+Citizen Science,13333,101,39,2000-01-01,2024-08-21
+Gill Net,13333,101,40,2000-01-01,2024-08-21
+Mark-Recapture,13333,101,38,2000-01-01,2024-08-20
+Seine Net,13333,101,39,2000-01-01,2024-08-21
+Snorkel Survey,13333,101,39,2000-01-02,2024-08-21
+Sonar Detection,13333,101,40,2000-01-02,2024-08-21
+Underwater Camera Trap,13333,101,40,2000-01-01,2024-08-21

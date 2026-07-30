@@ -1,0 +1,11 @@
+{
+  "generated_at_utc": "2026-07-30T12:04:37.621284+00:00",
+  "unit_of_analysis": "full scientific-name taxon",
+  "taxon_count": 101,
+  "output_count": 10,
+  "significant_spearman_pairs_fdr_0_05": 12,
+  "significant_threat_comparisons_fdr_0_05": 3,
+  "significant_habitat_comparisons_fdr_0_05": 3,
+  "significant_categorical_associations_fdr_0_05": 0,
+  "synthetic_data_caveat": "Results describe the supplied educational dataset and are not population estimates or causal ecological evidence."
+}

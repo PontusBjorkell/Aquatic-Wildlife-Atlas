@@ -1,0 +1,64 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Editors
+.vscode/
+.idea/
+
+# Generated data
+data/processed/*
+data/database/*
+data/analysis_results/*
+data/dashboard/*
+
+# Preserve generated-data directories
+!data/processed/.gitkeep
+!data/database/.gitkeep
+!data/analysis_results/.gitkeep
+!data/dashboard/.gitkeep
+
+# Raw source data
+data/raw/*.csv
+
+# Generated reports
+reports/figures/*
+reports/sql/*
+reports/statistical/*
+
+# Preserve report directories
+!reports/figures/.gitkeep
+!reports/sql/.gitkeep
+!reports/statistical/.gitkeep
+
+# Tableau temporary and backup files
+*.hyper
+*.tfl
+*.tflx
+~$*.twb
+~$*.twbx
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# Files required for Streamlit deployment
+!data/dashboard/*.csv
+!data/dashboard/*.json
+!data/processed/data_quality_report.json
+
+# Statistical portfolio outputs
+!reports/statistical/*.csv
+!reports/statistical/*.json
+!reports/statistical/*.md

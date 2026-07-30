@@ -1,0 +1,2 @@
+Model,N_Taxa,Intercept,Slope,R_Squared,P_Value,Slope_Standard_Error,Intercept_Standard_Error
+log10(Mean_Body_Weight_kg) ~ log10(Mean_Body_Length_cm),101,-3.952991328802816,2.532591916927927,0.8877753094789277,8.085538553703825e-49,0.09049827396185302,0.19333597901475405

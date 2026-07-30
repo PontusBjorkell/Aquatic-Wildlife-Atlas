@@ -1,0 +1,8 @@
+IUCN_Status,IUCN_Risk_Score,Conservation_Group,Taxon_Count,Observation_Count,Taxon_Percentage,Mean_Taxon_Body_Length_cm,Mean_Taxon_Body_Weight_kg,Mean_Taxon_Observed_Depth_m
+Not Evaluated,0,Unassessed or uncertain,1,1980,0.99,349.67,18.08,319.78
+Data Deficient,1,Unassessed or uncertain,2,3961,1.98,551.8,3585.97,77.45
+Least Concern,2,Least Concern,62,122770,61.39,208.44,2334.17,349.6
+Near Threatened,3,Near Threatened,6,11880,5.94,112.63,57.83,334.87
+Vulnerable,4,Threatened,18,35644,17.82,342.05,3778.46,265.72
+Endangered,5,Threatened,7,13863,6.93,725.68,24239.48,252.82
+Critically Endangered,6,Threatened,5,9902,4.95,297.64,395.07,148.72

@@ -1,0 +1,104 @@
+{
+  "dataset_summary": {
+    "rows": 200000,
+    "columns": 30,
+    "unique_record_ids": 200000,
+    "unique_common_names": 101,
+    "unique_scientific_names": 101,
+    "unique_species_epithets": 99,
+    "date_min": "2000-01-01",
+    "date_max": "2024-08-21"
+  },
+  "completeness": {
+    "total_missing_cells": 0,
+    "missing_by_column": {
+      "Record_ID": 0,
+      "Common_Name": 0,
+      "Scientific_Name": 0,
+      "Kingdom": 0,
+      "Phylum": 0,
+      "Class": 0,
+      "Order": 0,
+      "Family": 0,
+      "Genus": 0,
+      "Species": 0,
+      "Habitat_Type": 0,
+      "Depth_Min_m": 0,
+      "Depth_Max_m": 0,
+      "Obs_Depth_m": 0,
+      "Location": 0,
+      "Latitude": 0,
+      "Longitude": 0,
+      "Diet": 0,
+      "IUCN_Status": 0,
+      "Estimated_Age_yr": 0,
+      "Body_Length_cm": 0,
+      "Body_Weight_kg": 0,
+      "Sex": 0,
+      "Water_Temp_C": 0,
+      "Salinity_ppt": 0,
+      "pH": 0,
+      "Observation_Date": 0,
+      "Observation_Method": 0,
+      "Biome": 0,
+      "Fun_Fact": 0
+    },
+    "invalid_observation_dates": 0
+  },
+  "uniqueness": {
+    "duplicate_record_ids": 0,
+    "fully_duplicated_rows": 0
+  },
+  "range_checks": {
+    "invalid_latitudes": 0,
+    "invalid_longitudes": 0,
+    "negative_observation_depths": 0,
+    "observation_depth_outside_stated_range": 0,
+    "nonpositive_body_lengths": 0,
+    "nonpositive_body_weights": 0,
+    "ph_outside_0_14": 0,
+    "negative_salinity": 0
+  },
+  "taxonomy_checks": {
+    "ambiguous_species_epithet_count": 2,
+    "ambiguous_species_epithets": {
+      "gigas": [
+        "Arapaima gigas",
+        "Tridacna gigas"
+      ],
+      "niloticus": [
+        "Crocodylus niloticus",
+        "Oreochromis niloticus"
+      ]
+    },
+    "scientific_name_is_recommended_taxon_key": true
+  },
+  "category_checks": {
+    "observed_iucn_statuses": [
+      "Critically Endangered",
+      "Data Deficient",
+      "Endangered",
+      "Least Concern",
+      "Near Threatened",
+      "Not Evaluated",
+      "Vulnerable"
+    ],
+    "unknown_iucn_statuses": []
+  },
+  "synthetic_pattern_indicators": {
+    "taxon_count": 101,
+    "constant_within_taxon": {
+      "Depth_Min_m": 101,
+      "Depth_Max_m": 101,
+      "Habitat_Type": 101,
+      "Diet": 101,
+      "IUCN_Status": 101,
+      "Biome": 101,
+      "Fun_Fact": 101
+    },
+    "observation_count_min_per_taxon": 1980,
+    "observation_count_max_per_taxon": 1981,
+    "no_missing_values": true,
+    "interpretation": "The regular class counts, complete records, and attributes that are constant within taxa are consistent with a template-generated or synthetic dataset. Results should be described as patterns in the supplied data, not population estimates or real-world ecological evidence."
+  }
+}
