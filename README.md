@@ -24,14 +24,14 @@ An end-to-end biodiversity analytics portfolio built with Python, SQL, statistic
 |---|---|
 | Tableau dashboard | [Open the Aquatic Wildlife Atlas Executive Overview](https://public.tableau.com/app/profile/pontus.bj.rkell/viz/AquaticWildlifeAtlas/AquaticWildlifeAtlasExecutiveOverview) |
 | Source dataset | [Aquatic Wildlife Atlas: Global Species Records on Kaggle](https://www.kaggle.com/datasets/maulikgajera/aquatic-wildlife-atlas-global-species-records) |
-| Streamlit application | Local only â€” see [Running the Streamlit dashboard](#running-the-streamlit-dashboard) |
+| Streamlit application | Local only - see [Running the Streamlit dashboard](#running-the-streamlit-dashboard) |
 | Repository | [PontusBjorkell/Aquatic-Wildlife-Atlas](https://github.com/PontusBjorkell/Aquatic-Wildlife-Atlas) |
 
 ## Tableau dashboard
 
 [![Aquatic Wildlife Atlas Tableau executive overview](images/tableau/executive_overview.png)](https://public.tableau.com/app/profile/pontus.bj.rkell/viz/AquaticWildlifeAtlas/AquaticWildlifeAtlasExecutiveOverview)
 
-The Tableau executive overview presents four headline indicators, conservation-status composition, threatened share by sufficiently represented taxonomic class, and the fitted body lengthâ€“weight relationship.
+The Tableau executive overview presents four headline indicators, conservation-status composition, threatened share by sufficiently represented taxonomic class, and the fitted body length-weight relationship.
 
 ## Project overview
 
@@ -89,7 +89,7 @@ The Streamlit interface is the detailed exploration layer. It includes shared fi
 | **Conservation Overview** | Explore status composition, threatened share by class, and the taxa in threatened categories. |
 | **Global Distribution** | Inspect a deterministic coordinate sample with habitat, status, and observation-year filters. |
 | **Habitat & Environment** | Compare depth, temperature, salinity, pH, habitat composition, and biome-level summaries. |
-| **Biological Traits** | Explore morphology, diet, longevity, and the allometric body lengthâ€“weight relationship. |
+| **Biological Traits** | Explore morphology, diet, longevity, and the allometric body length-weight relationship. |
 | **Observation Trends** | Examine complete-year, monthly, and observation-method record composition. |
 | **Data Quality** | Review completeness, duplicate IDs, taxonomic ambiguity, record balance, and coordinate-dispersion diagnostics. |
 
@@ -158,7 +158,7 @@ Included analyses cover:
 
 - Descriptive taxon-level statistics.
 - Pairwise Spearman correlations with p-values.
-- Kruskalâ€“Wallis comparisons across habitat groups.
+- Kruskal-Wallis comparisons across habitat groups.
 - Categorical association analysis.
 - Comparisons between threatened and non-threatened groups.
 - Allometric regression of body weight on body length.
@@ -170,7 +170,7 @@ $$
 \beta_0 + \beta_1\log_{10}(\text{length}) + \varepsilon
 $$
 
-The supplied data produces an approximate slope of **2.533**, with **RÂ² â‰ˆ 0.888** and **p < 0.0001**. Here, â€œlogâ€“logâ€ means that both variables are transformed with base-10 logarithms before fitting the linear model; it does not mean taking the logarithm twice.
+The supplied data produces an approximate slope of **2.533**, with **R&sup2; &asymp; 0.888** and **p < 0.0001**. Here, "log-log" means that both variables are transformed with base-10 logarithms before fitting the linear model; it does not mean taking the logarithm twice.
 
 Machine-readable results and a written statistical report are stored under `reports/statistical/`.
 
@@ -188,58 +188,58 @@ The database layer in `src/aquatic_wildlife/database.py` executes the schema and
 
 ```text
 Aquatic-Wildlife-Atlas/
-â”œâ”€â”€ dashboard/
-â”‚   â””â”€â”€ streamlit/
-â”‚       â”œâ”€â”€ Home.py
-â”‚       â”œâ”€â”€ utils.py
-â”‚       â””â”€â”€ pages/
-â”‚           â”œâ”€â”€ 1_Species_Explorer.py
-â”‚           â”œâ”€â”€ 2_Conservation_Overview.py
-â”‚           â”œâ”€â”€ 3_Global_Distribution.py
-â”‚           â”œâ”€â”€ 4_Habitat_Environment.py
-â”‚           â”œâ”€â”€ 5_Biological_Traits.py
-â”‚           â”œâ”€â”€ 6_Observation_Trends.py
-â”‚           â””â”€â”€ 7_Data_Quality.py
-â”œâ”€â”€ data/
-â”‚   â”œâ”€â”€ raw/                 # Original Kaggle CSV; not committed
-â”‚   â”œâ”€â”€ processed/           # Prepared data and quality report
-â”‚   â”œâ”€â”€ database/            # Generated SQLite warehouse
-â”‚   â”œâ”€â”€ analysis_results/    # Generated analytical outputs
-â”‚   â””â”€â”€ dashboard/           # Dashboard-ready extracts
-â”œâ”€â”€ images/
-â”‚   â”œâ”€â”€ streamlit/
-â”‚   â””â”€â”€ tableau/
-â”œâ”€â”€ reports/
-â”‚   â”œâ”€â”€ figures/
-â”‚   â”œâ”€â”€ sql/
-â”‚   â””â”€â”€ statistical/
-â”œâ”€â”€ scripts/
-â”‚   â”œâ”€â”€ prepare_data.py
-â”‚   â”œâ”€â”€ build_database.py
-â”‚   â”œâ”€â”€ run_analysis.py
-â”‚   â”œâ”€â”€ run_statistical_analysis.py
-â”‚   â””â”€â”€ export_dashboard_data.py
-â”œâ”€â”€ sql/
-â”‚   â”œâ”€â”€ create_schema.sql
-â”‚   â”œâ”€â”€ create_views.sql
-â”‚   â””â”€â”€ analysis_queries.sql
-â”œâ”€â”€ src/
-â”‚   â””â”€â”€ aquatic_wildlife/
-â”‚       â”œâ”€â”€ config.py
-â”‚       â”œâ”€â”€ data.py
-â”‚       â”œâ”€â”€ validation.py
-â”‚       â”œâ”€â”€ database.py
-â”‚       â”œâ”€â”€ analysis.py
-â”‚       â”œâ”€â”€ statistics.py
-â”‚       â””â”€â”€ dashboard.py
-â”œâ”€â”€ tableau/
-â”‚   â”œâ”€â”€ aquatic_wildlife_dashboard.twb
-â”‚   â””â”€â”€ aquatic_wildlife_dashboard.twbx
-â”œâ”€â”€ tests/
-â”œâ”€â”€ .gitignore
-â”œâ”€â”€ pyproject.toml
-â”œâ”€â”€ requirements.txt
-â””â”€â”€ README.md
+|-- dashboard/
+|   `-- streamlit/
+|       |-- Home.py
+|       |-- utils.py
+|       `-- pages/
+|           |-- 1_Species_Explorer.py
+|           |-- 2_Conservation_Overview.py
+|           |-- 3_Global_Distribution.py
+|           |-- 4_Habitat_Environment.py
+|           |-- 5_Biological_Traits.py
+|           |-- 6_Observation_Trends.py
+|           `-- 7_Data_Quality.py
+|-- data/
+|   |-- raw/                 # Original Kaggle CSV; not committed
+|   |-- processed/           # Prepared data and quality report
+|   |-- database/            # Generated SQLite warehouse
+|   |-- analysis_results/    # Generated analytical outputs
+|   `-- dashboard/           # Dashboard-ready extracts
+|-- images/
+|   |-- streamlit/
+|   `-- tableau/
+|-- reports/
+|   |-- figures/
+|   |-- sql/
+|   `-- statistical/
+|-- scripts/
+|   |-- prepare_data.py
+|   |-- build_database.py
+|   |-- run_analysis.py
+|   |-- run_statistical_analysis.py
+|   `-- export_dashboard_data.py
+|-- sql/
+|   |-- create_schema.sql
+|   |-- create_views.sql
+|   `-- analysis_queries.sql
+|-- src/
+|   `-- aquatic_wildlife/
+|       |-- config.py
+|       |-- data.py
+|       |-- validation.py
+|       |-- database.py
+|       |-- analysis.py
+|       |-- statistics.py
+|       `-- dashboard.py
+|-- tableau/
+|   |-- aquatic_wildlife_dashboard.twb
+|   `-- aquatic_wildlife_dashboard.twbx
+|-- tests/
+|-- .gitignore
+|-- pyproject.toml
+|-- requirements.txt
+`-- README.md
 ```
 
 ## Technology stack
@@ -335,12 +335,12 @@ The tests cover data preparation, validation, warehouse construction, analytics,
 
 The repository contains Tableau workbook files under `tableau/`:
 
-- `aquatic_wildlife_dashboard.twb` â€” unpackaged workbook definition.
-- `aquatic_wildlife_dashboard.twbx` â€” packaged workbook.
+- `aquatic_wildlife_dashboard.twb` - unpackaged workbook definition.
+- `aquatic_wildlife_dashboard.twbx` - packaged workbook.
 
 The published dashboard is available here:
 
-**[Aquatic Wildlife Atlas â€” Executive Overview on Tableau Public](https://public.tableau.com/app/profile/pontus.bj.rkell/viz/AquaticWildlifeAtlas/AquaticWildlifeAtlasExecutiveOverview)**
+**[Aquatic Wildlife Atlas - Executive Overview on Tableau Public](https://public.tableau.com/app/profile/pontus.bj.rkell/viz/AquaticWildlifeAtlas/AquaticWildlifeAtlasExecutiveOverview)**
 
 The dashboard intentionally summarizes the project rather than duplicating every Streamlit page. Detailed filtering, species profiles, environmental exploration, observation trends, and the full data-quality investigation remain in the local Streamlit application.
 
@@ -349,7 +349,7 @@ The dashboard intentionally summarizes the project rather than duplicating every
 > [!CAUTION]
 > This dataset should be treated as **synthetic or template-generated educational data**, not as verified ecological occurrence evidence.
 
-The projectâ€™s validation and exploratory analysis identified several strong procedural patterns:
+The project's validation and exploratory analysis identified several strong procedural patterns:
 
 - Every taxon has almost exactly the same number of records: 1,980 or 1,981.
 - The dataset contains no missing cells.
@@ -390,11 +390,11 @@ The analysis uses the Kaggle dataset:
 
 **[Aquatic Wildlife Atlas: Global Species Records](https://www.kaggle.com/datasets/maulikgajera/aquatic-wildlife-atlas-global-species-records)** by Maulik Gajera.
 
-Please consult the Kaggle page for the datasetâ€™s current description, provenance, license, and redistribution terms. The source CSV is intentionally not required to be committed to this repository.
+Please consult the Kaggle page for the dataset's current description, provenance, license, and redistribution terms. The source CSV is intentionally not required to be committed to this repository.
 
 ## Author
 
-Created by **Pontus BjÃ¶rkell** as a data analytics and visualization portfolio project.
+Created by **Pontus Bj&ouml;rkell** as a data analytics and visualization portfolio project.
 
 - [GitHub profile](https://github.com/PontusBjorkell)
 - [Tableau Public profile](https://public.tableau.com/app/profile/pontus.bj.rkell)
